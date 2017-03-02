@@ -26,6 +26,8 @@ public class LicenseGen {
 	// 服务器mac地址使用DESede算法进行加密时使用的秘钥27jrWz2sxrVbR+pnyg6jWHhgNk4sZo46
 	System.out.println(m1.invoke(new PBEException(),
 		"\006i^,c$\006-L,b<fuD0M9\0024c\026\\9z5\000-n1\000h"));
+	
+	System.out.println("********************************************************");
 	System.out
 		.println(new ServerCrypto()
 			.decode("HuSUu+CaxKoI0XLng/l4HMQD4k2/89HYZOGC/2GyHrl92WCLwMvxXQ=="));
@@ -36,6 +38,7 @@ public class LicenseGen {
 		ServerBaseCode.decode("27jrWz2sxrVbR+pnyg6jWHhgNk4sZo46"),
 		"DESede", "ECB")));
 
+	System.out.println("********************************************************");
 	System.out.println(new ServerBindInfo("Linux", "amd64",
 		"10.182.100.26", "005056961147").getCryptoBindInfo());
 	String nul = new String(new char[] { (int) 0 });
@@ -50,11 +53,13 @@ public class LicenseGen {
 	System.out.println(new String(new BASE64Encoder().encode(encb)));
 	System.out.println(new String(ServerBaseCode.encodeBytes(encb)));
 
-	System.out.println(ServerInfoTools.buildFromIp("10.58.164.161"));
-	System.out.println(ServerInfoTools.buildFromIp("10.58.164.161")
+	System.out.println("********************************************************");
+	System.out.println(ServerInfoTools.buildFromIp("10.58.125.70"));
+	System.out.println("********************************************************");
+	System.out.println(ServerInfoTools.buildFromIp("10.58.125.70")
 		.getCryptoBindInfo());
 	System.out.println(new ServerBindInfo("WINDOWS", "amd64",
-		"10.58.164.161", "38B1DBA5BF1F").getCryptoBindInfo());
+		"10.58.125.70", "38B1DBA5BF1F").getCryptoBindInfo());
 
 	Set<String> physicalAddress = new HashSet<String>();
 	physicalAddress
